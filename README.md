@@ -60,3 +60,25 @@ CapsuleFarmerEvolved is not endorsed by Riot Games and does not reflect the view
 This project comes with no guarantee or warranty. You are responsible for whatever happens from using this project. No bans have been reported from using this project but it is not a guarantee. This is a personal project and is in no way affiliated with Riot Games.
 <!-- Properly citing disclaimer from Riot Games Developer Portal https://developer.riotgames.com/docs/lol -->
 
+<!-- !!!! Do not delete this pull request template! !!!! -->
+<!-- Pull requests that do not follow this template are likely to be ignored and closed. -->
+
+<!-- Add the issues this PR fixes here. If no issues are related to this PR, then this line can be removed. -->
+<!-- Add further issues with a full "Fixes #[issue_no]" line to ensure GitHub closes each one when the PR is merged. -->
+
+## How to enable the Poro-server
+![image](https://user-images.githubusercontent.com/10279395/220099601-0bbd4e1a-7955-4fed-a876-e6b274b04086.png)
+### .env version
+1. create an .env file inside src
+![image](https://user-images.githubusercontent.com/10279395/220187569-ac6dea37-6872-4186-9186-4d1cc2714572.png)
+2. add the settings you want to adjust (by default you don't need any except WEBSERVER) to run it
+![image](https://user-images.githubusercontent.com/10279395/220187788-8bcddc3f-e24d-4db5-b90f-d1bf6f604d55.png)
+3. run the program you'll see this:
+![image](https://user-images.githubusercontent.com/10279395/220190566-67af98af-1fd7-4ea9-a6c8-a1370113ad64.png)
+### docker version
+1. adjust or create dockerfile environments:
+![image](https://user-images.githubusercontent.com/10279395/220190397-ed487ed9-680d-4a5d-9e63-05a435cf68c9.png)
+
+2. build the image ```docker build -t capsulefarmerevolved .```
+3. running the image ```docker run -it --restart unless-stopped -d -p 5000:8543 -v ./config/config.yaml:/config/config.yaml  capsulefarmerevolved```
+![image](https://user-images.githubusercontent.com/10279395/220190640-1ef3da7c-d913-4b20-9283-d98714aa5875.png)
